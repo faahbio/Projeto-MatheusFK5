@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matheus Kolombeski - Editor & Colorista</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>
+            <img
+              id="foto-rosto"
+              src="foto_rosto.jpg"
+              alt="Foto de Matheus Kolombeski"
+              width="50"
+            />
+          </h2>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Início</a></li>
+          <li><a href="#about" class="nav-link">Sobre</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+          <li><a href="#contact" class="nav-link">Contato</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="parallax-bg"></div>
+      <div class="hero-content">
+        <img
+          src="foto_rosto.jpg"
+          alt="Foto de Matheus Kolombeski"
+          class="hero-image"
+        />
+        <h1 class="hero-title">MATHEUS KOLOMBESKI</h1>
+        <p class="hero-subtitle">Editor & Colorista</p>
+        <p class="hero-description">
+          Trabalho com a arte de contar histórias através de imagens e cores
+        </p>
+        <div class="hero-video-container">
+          <iframe
+            src="https://player.vimeo.com/video/1109226159?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;pip=0&amp;sidedock=0&amp"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Demoreel Matheus Kolombeski"
+          ></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">Sobre mim</h2>
+        <div class="about-content">
+          <p>
+            Sou editor de vídeo com foco em montagem e colorização, atuando
+            desde 2021. Ao longo desse período, tive a oportunidade de trabalhar
+            em diferentes formatos, como clipes musicais, coberturas de eventos,
+            vídeos institucionais e educacionais, gameplays e vídeos curtos.
+          </p>
+          <p>
+            Em cada projeto que eu trabalho, junto técnica e criatividade para
+            entregar o melhor resultado possível, atendendo às expectativas do
+            cliente.
+          </p>
+          <p>
+            Atualmente, estou estudando Cinema e sigo em constante aprimoramento
+            técnico e artístico para oferecer soluções audiovisuais cada vez
+            mais completas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2 class="section-title">Portfólio</h2>
+
+        <!-- Videoclipe Category -->
+        <div class="category-section" id="videoclipe">
+          <div class="category-header">
+            <h3 class="category-title">Videoclipe</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="media-grid">
+            <div class="media-item">
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/04LyRJsJFRc?si=IbKr2SAMQYrVgIwX"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="media-item">
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/5NTvqKJJ7Dk?si=lgXPnVYc9GgP9E7h"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Institucional Category -->
+        <div class="category-section" id="institucional">
+          <div class="category-header">
+            <h3 class="category-title">Institucional</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="media-grid">
+            <div class="media-item">
+              <div class="media-placeholder">
+                <i class="fas fa-play"></i>
+                <p>Adicionar vídeo institucional</p>
+              </div>
+            </div>
+            <div class="media-item">
+              <div class="media-placeholder">
+                <i class="fas fa-play"></i>
+                <p>Adicionar vídeo institucional</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gameplay Category -->
+        <div class="category-section" id="gameplay">
+          <div class="category-header">
+            <h3 class="category-title">Gameplay</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="media-grid">
+            <div class="media-item">
+              <div class="media-placeholder">
+                <i class="fas fa-play"></i>
+                <p>Adicionar vídeo de gameplay</p>
+              </div>
+            </div>
+            <div class="media-item">
+              <div class="media-placeholder">
+                <i class="fas fa-play"></i>
+                <p>Adicionar vídeo de gameplay</p>
+              </div>
+            </div>
+            <div class="media-item">
+              <div class="media-placeholder">
+                <i class="fas fa-play"></i>
+                <p>Adicionar vídeo de gameplay</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instagram Category -->
+        <div class="category-section" id="instagram">
+          <div class="category-header">
+            <h3 class="category-title">Instagram</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="media-grid media-grid-vertical">
+            <div class="media-item media-item-vertical">
+              <div class="media-placeholder">
+                <i class="fas fa-play"></i>
+                <p>Vídeo para Instagram</p>
+              </div>
+            </div>
+            <div class="media-item media-item-vertical">
+              <div class="media-placeholder">
+                <i class="fas fa-play"></i>
+                <p>Vídeo para Instagram</p>
+              </div>
+            </div>
+            <div class="media-item media-item-vertical">
+              <div class="media-placeholder">
+                <i class="fas fa-play"></i>
+                <p>Vídeo para Instagram</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Educacional Category -->
+        <div class="category-section" id="educacional">
+          <div class="category-header">
+            <h3 class="category-title">Educacional</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="media-grid">
+            <div class="media-item">
+              <div class="media-placeholder">
+                <i class="fas fa-play"></i>
+                <p>Adicionar vídeo educacional</p>
+              </div>
+            </div>
+            <div class="media-item">
+              <div class="media-placeholder">
+                <i class="fas fa-play"></i>
+                <p>Adicionar vídeo educacional</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Color Grading Category -->
+        <div class="category-section" id="color-grading">
+          <div class="category-header">
+            <h3 class="category-title">Color Grading</h3>
+            <div class="category-line"></div>
+          </div>
+          <div class="media-grid">
+            <div class="media-item">
+              <div class="media-placeholder">
+                <i class="fas fa-image"></i>
+                <p>Before/After Color Grading</p>
+              </div>
+            </div>
+            <div class="media-item">
+              <div class="media-placeholder">
+                <i class="fas fa-image"></i>
+                <p>Before/After Color Grading</p>
+              </div>
+            </div>
+            <div class="media-item">
+              <div class="media-placeholder">
+                <i class="fas fa-image"></i>
+                <p>Before/After Color Grading</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <h3>Entre em contato</h3>
+          <p>Vamos criar algo incrível juntos!</p>
+          <div class="social-buttons">
+            <a
+              href="https://wa.me/5511999999999"
+              class="social-btn whatsapp"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+            <a
+              href="https://instagram.com/matheusFK5"
+              class="social-btn instagram"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+            <a href="mailto:contato@matheusFK5.com" class="social-btn email">
+              <i class="fas fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
