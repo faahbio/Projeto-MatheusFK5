@@ -180,10 +180,11 @@ body {
 }
 
 .hero-title {
-    font-family: "Bebas Neue", sans-serif ;
+  font-family: "Bebas Neue", sans-serif;
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 700;
-  margin-bottom: 1rem;
+  line-height: 1;
+  margin-bottom: 0px;
   background: linear-gradient(135deg, #8b5cf6, #ec4899, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
