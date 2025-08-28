@@ -1,3 +1,8 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
+// Initialize Speed Insights (optional)
+const speedInsights = new SpeedInsights
+
 // DOM Content Loaded
 document.addEventListener("DOMContentLoaded", function () {
   // Mobile Navigation
