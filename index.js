@@ -1,10 +1,86 @@
-import { SpeedInsights } from "@vercel/speed-insights/next"
+// Comparison Slider Functionality
+function initComparisonSlider(sliderId) {
+  // DOM Content Loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Initialize all Comparison Sliders
+    initComparisonSlider("slider-1");
+    initComparisonSlider("slider-2");
+    initComparisonSlider("slider-3");
+    initComparisonSlider("slider-4");
+  });
+  const sliderContainer = document.querySelector(`#${sliderId}`);
+  if (!sliderContainer) return;
 
-// Initialize Speed Insights (optional)
-const speedInsights = new SpeedInsights
+  const afterImage = sliderContainer.querySelector(".after-image");
+  const sliderHandle = sliderContainer.querySelector(".slider-handle");
+
+  if (!afterImage || !sliderHandle) return;
+
+  let isDragging = false;
+
+  function updateSlider(clientX) {
+    const rect = sliderContainer.getBoundingClientRect();
+    let newX = clientX - rect.left;
+    newX = Math.max(0, Math.min(newX, rect.width));
+    const newWidth = (newX / rect.width) * 100;
+
+    // Use clip-path instead of width for better control
+    afterImage.style.clipPath = `inset(0 ${100 - newWidth}% 0 0)`;
+    sliderHandle.style.left = `${newWidth}%`;
+  }
+
+  // Mouse events
+  sliderHandle.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    e.preventDefault();
+    document.body.style.cursor = "ew-resize";
+    updateSlider(e.clientX);
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    updateSlider(e.clientX);
+  });
+
+  document.addEventListener("mouseup", () => {
+    if (isDragging) {
+      isDragging = false;
+      document.body.style.cursor = "";
+    }
+  });
+
+  // Click direto no container
+  sliderContainer.addEventListener("click", (e) => {
+    if (e.target !== sliderHandle) {
+      updateSlider(e.clientX);
+    }
+  });
+
+  // Touch events para dispositivos móveis
+  sliderHandle.addEventListener("touchstart", (e) => {
+    isDragging = true;
+    e.preventDefault();
+    updateSlider(e.touches[0].clientX);
+  });
+
+  document.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    updateSlider(e.touches[0].clientX);
+  });
+
+  document.addEventListener("touchend", () => {
+    if (isDragging) {
+      isDragging = false;
+    }
+  });
+}
 
 // DOM Content Loaded
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize Comparison Slider
+  initComparisonSlider("slider-1");
   // Mobile Navigation
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
@@ -148,28 +224,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (ctaButton) ctaButton.style.opacity = "1";
   }, 700);
 
-  // Typing Effect for Hero Title (Optional)
-  function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = "";
-
-    function type() {
-      if (i < text.length) {
-        element.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(type, speed);
-      }
-    }
-    type();
-  }
-
   // Media Item Click Handlers (for future video integration)
   mediaItems.forEach((item) => {
     item.addEventListener("click", function () {
       const placeholder = this.querySelector(".media-placeholder");
       if (placeholder) {
         // Here you can add video modal or redirect logic
-        console.log("Media item clicked:", this);
 
         // Example: Add pulse animation
         this.style.animation = "pulse 0.3s ease-in-out";
@@ -189,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
         : this.classList.contains("instagram")
         ? "Instagram"
         : "Email";
-      console.log(`Social media click: ${platform}`);
+      // Track social media clicks if needed
     });
   });
 
@@ -279,26 +339,3 @@ const optimizedScroll = debounce(function () {
 }, 10);
 
 window.addEventListener("scroll", optimizedScroll);
-
-// Add to Home Screen Prompt (PWA Ready)
-let deferredPrompt;
-window.addEventListener("beforeinstallprompt", (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-
-  // Show install button if needed
-  const installBtn = document.querySelector(".install-btn");
-  if (installBtn) {
-    installBtn.style.display = "block";
-
-    installBtn.addEventListener("click", () => {
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === "accepted") {
-          console.log("User accepted the A2HS prompt");
-        }
-        deferredPrompt = null;
-      });
-    });
-  }
-});

@@ -55,7 +55,10 @@
           alt="Foto de Matheus Kolombeski"
           class="hero-image"
         />
-        <h1 class="hero-title">MATHEUS <br> KOLOMBESKI</h1>
+        <h1 class="hero-title">
+          MATHEUS <br />
+          KOLOMBESKI
+        </h1>
         <p class="hero-subtitle">Editor & Colorista</p>
         <p class="hero-description">
           Trabalho com a arte de contar histórias através de imagens e cores
@@ -148,15 +151,15 @@
           </div>
           <div class="media-grid">
             <div class="media-item">
-              <div class="media-placeholder">
-                <i class="fas fa-play"></i>
-                <p>Adicionar vídeo institucional</p>
-              </div>
-            </div>
-            <div class="media-item">
-              <div class="media-placeholder">
-                <i class="fas fa-play"></i>
-                <p>Adicionar vídeo institucional</p>
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/j8x8IeJUpwE?si=IDxj-ceKnXlDcD2c"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -170,21 +173,15 @@
           </div>
           <div class="media-grid">
             <div class="media-item">
-              <div class="media-placeholder">
-                <i class="fas fa-play"></i>
-                <p>Adicionar vídeo de gameplay</p>
-              </div>
-            </div>
-            <div class="media-item">
-              <div class="media-placeholder">
-                <i class="fas fa-play"></i>
-                <p>Adicionar vídeo de gameplay</p>
-              </div>
-            </div>
-            <div class="media-item">
-              <div class="media-placeholder">
-                <i class="fas fa-play"></i>
-                <p>Adicionar vídeo de gameplay</p>
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/NjZK054zS_o?si=bO7b_RAmurrQkCLn"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -198,21 +195,15 @@
           </div>
           <div class="media-grid media-grid-vertical">
             <div class="media-item media-item-vertical">
-              <div class="media-placeholder">
-                <i class="fas fa-play"></i>
-                <p>Vídeo para Instagram</p>
-              </div>
-            </div>
-            <div class="media-item media-item-vertical">
-              <div class="media-placeholder">
-                <i class="fas fa-play"></i>
-                <p>Vídeo para Instagram</p>
-              </div>
-            </div>
-            <div class="media-item media-item-vertical">
-              <div class="media-placeholder">
-                <i class="fas fa-play"></i>
-                <p>Vídeo para Instagram</p>
+              <div class="video-container">
+                <iframe
+                  title="vimeo-player"
+                  src="https://player.vimeo.com/video/1108200274?h=e0953346ac"
+                  frameborder="0"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -226,15 +217,27 @@
           </div>
           <div class="media-grid">
             <div class="media-item">
-              <div class="media-placeholder">
-                <i class="fas fa-play"></i>
-                <p>Adicionar vídeo educacional</p>
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/eW9CT77S1wQ?si=M1sJEVkjKVIuSLPc"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
             <div class="media-item">
-              <div class="media-placeholder">
-                <i class="fas fa-play"></i>
-                <p>Adicionar vídeo educacional</p>
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/G4e5cR1obTE?si=7EmszFZFUgOY1TP2"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -248,21 +251,71 @@
           </div>
           <div class="media-grid">
             <div class="media-item">
-              <div class="media-placeholder">
-                <i class="fas fa-image"></i>
-                <p>Before/After Color Grading</p>
+              <div class="comparison-slider" id="slider-1">
+                <img
+                  src="Before_1.png"
+                  alt="Antes"
+                  class="before-image"
+                  draggable="false"
+                />
+                <div class="after-image">
+                  <img src="after_1.png" alt="Depois" draggable="false" />
+                </div>
+                <div class="slider-handle">
+                  <div class="slider-line"></div>
+                  <div class="slider-circle"></div>
+                </div>
               </div>
             </div>
             <div class="media-item">
-              <div class="media-placeholder">
-                <i class="fas fa-image"></i>
-                <p>Before/After Color Grading</p>
+              <div class="comparison-slider" id="slider-2">
+                <img
+                  src="Before_2.png"
+                  alt="Antes"
+                  class="before-image"
+                  draggable="false"
+                />
+                <div class="after-image">
+                  <img src="After_2.png" alt="Depois" draggable="false" />
+                </div>
+                <div class="slider-handle">
+                  <div class="slider-line"></div>
+                  <div class="slider-circle"></div>
+                </div>
               </div>
             </div>
             <div class="media-item">
-              <div class="media-placeholder">
-                <i class="fas fa-image"></i>
-                <p>Before/After Color Grading</p>
+              <div class="comparison-slider" id="slider-3">
+                <img
+                  src="Before_3.png"
+                  alt="Antes"
+                  class="before-image"
+                  draggable="false"
+                />
+                <div class="after-image">
+                  <img src="After_3.png" alt="Depois" draggable="false" />
+                </div>
+                <div class="slider-handle">
+                  <div class="slider-line"></div>
+                  <div class="slider-circle"></div>
+                </div>
+              </div>
+            </div>
+            <div class="media-item">
+              <div class="comparison-slider" id="slider-4">
+                <img
+                  src="Before_4.png"
+                  alt="Antes"
+                  class="before-image"
+                  draggable="false"
+                />
+                <div class="after-image">
+                  <img src="After_4.png" alt="Depois" draggable="false" />
+                </div>
+                <div class="slider-handle">
+                  <div class="slider-line"></div>
+                  <div class="slider-circle"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -278,7 +331,7 @@
           <p>Vamos criar algo incrível juntos!</p>
           <div class="social-buttons">
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5547997057881"
               class="social-btn whatsapp"
               target="_blank"
               rel="noopener"
@@ -286,16 +339,8 @@
               <i class="fab fa-whatsapp"></i>
               <span>WhatsApp</span>
             </a>
-            <a
-              href="https://instagram.com/matheusFK5"
-              class="social-btn instagram"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-instagram"></i>
-              <span>Instagram</span>
-            </a>
-            <a href="mailto:contato@matheusFK5.com" class="social-btn email">
+
+            <a href="mailto:matheusfk5@gmail.com" class="social-btn email">
               <i class="fas fa-envelope"></i>
               <span>Email</span>
             </a>

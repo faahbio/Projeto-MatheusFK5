@@ -367,6 +367,88 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
+/* Videoclipe section specific layout - side by side items */
+#videoclipe .media-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+#videoclipe .media-item {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Instagram section specific layout - single centered item */
+#instagram .media-grid {
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  margin: 2rem auto 0;
+}
+
+#instagram .media-item {
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Institucional section specific layout - single centered item */
+#institucional .media-grid {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+#institucional .media-item {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Gameplay section specific layout - single centered item */
+#gameplay .media-grid {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+#gameplay .media-item {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Educacional section specific layout - side by side items */
+#educacional .media-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+#educacional .media-item {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Color Grading section specific layout */
+#color-grading .media-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+#color-grading .media-item {
+  width: 100%;
+  max-width: 600px;
+}
+
 .media-item {
   aspect-ratio: 16/9;
   border-radius: 15px;
@@ -543,6 +625,73 @@ body {
     gap: 1.5rem;
   }
 
+  /* Videoclipe responsive */
+  #videoclipe .media-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  #videoclipe .media-item {
+    max-width: 100%;
+  }
+
+  /* Instagram responsive */
+  #instagram .media-grid {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  #instagram .media-item {
+    max-width: 100%;
+  }
+
+  /* Institucional responsive */
+  #institucional .media-grid {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  #institucional .media-item {
+    max-width: 100%;
+  }
+
+  /* Gameplay responsive */
+  #gameplay .media-grid {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  #gameplay .media-item {
+    max-width: 100%;
+  }
+
+  /* Educacional responsive */
+  #educacional .media-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  #educacional .media-item {
+    max-width: 100%;
+  }
+
+  /* Color Grading responsive */
+  #color-grading .media-grid {
+    gap: 2rem;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  #color-grading .media-item {
+    max-width: 100%;
+  }
+
   .media-grid-vertical {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
@@ -602,6 +751,147 @@ body {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Comparison Slider Styles */
+.comparison-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+}
+
+.before-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.after-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  clip-path: inset(0 50% 0 0);
+}
+
+.comparison-slider .before-image,
+.comparison-slider .after-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.after-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+  z-index: 3;
+  cursor: ew-resize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-handle::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-handle:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.5);
+}
+
+.slider-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #8b5cf6;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+.slider-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  border: 3px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.slider-circle::before {
+  content: "⟨ ⟩";
+  letter-spacing: 2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .comparison-slider {
+    height: 300px;
+  }
+
+  .slider-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .slider-circle::before {
+    letter-spacing: 1px;
+  }
 }
 
 /* Custom scrollbar */
