@@ -1,13 +1,5 @@
 // Comparison Slider Functionality
 function initComparisonSlider(sliderId) {
-  // DOM Content Loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    // Initialize all Comparison Sliders
-    initComparisonSlider("slider-1");
-    initComparisonSlider("slider-2");
-    initComparisonSlider("slider-3");
-    initComparisonSlider("slider-4");
-  });
   const sliderContainer = document.querySelector(`#${sliderId}`);
   if (!sliderContainer) return;
 
@@ -79,8 +71,12 @@ function initComparisonSlider(sliderId) {
 
 // DOM Content Loaded
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize Comparison Slider
+  // Initialize all Comparison Sliders
   initComparisonSlider("slider-1");
+  initComparisonSlider("slider-2");
+  initComparisonSlider("slider-3");
+  initComparisonSlider("slider-4");
+
   // Mobile Navigation
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
